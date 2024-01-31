@@ -1,0 +1,358 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600&display=swap");
+
+:root {
+  --main-font: "Source Serif 4", serif;
+  --main-color: #0d0c22;
+  --bg-color: #f8f7f4;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body,
+html {
+  width: 100%;
+  height: 300vh;
+  background-color: var(--bg-color);
+  font-size: var(--main-font);
+}
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+/* scroll bar with main-color and background transparent */
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+::-webkit-scrollbar-track {
+  background: #f81056;
+}
+::-webkit-scrollbar-thumb {
+  background: blue;
+  border-radius: 5px;
+}
+.navbar-brand>img{
+  width: 80px;
+  height: 70px;
+}
+.nav-item>a>i{
+  display: block;
+  padding: 10px;
+  color: black;
+ 
+}
+.nav-item{
+  padding: 10px;
+  color: #0d0c22;
+  font-weight: 500;
+}
+
+
+/* ------------------------------- hero section start---------------------------------- */
+.hero-main{
+    /* background-color:rgb(137, 173, 161); */
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    box-sizing: border-box;
+    flex-direction: column;
+    padding-top: 15vh;
+    >.hero-main-intro{
+        display: inline-flex;
+        padding: 10px 15px ;
+        min-height: 40px;
+        align-items: center;
+        box-sizing: border-box;
+        background-color: #ffda79;
+        border-radius: 99px;
+        font-family: "Source Serif 4", Georgia, serif;
+        font-weight: 500;
+        line-height: 1;
+       >a{
+        color:  #3d3d4e;
+       } 
+
+    }
+    >.hero-heading{
+        max-width: 52%;
+        text-align: center;
+        font-family: "Source Serif 4", Georgia, serif;
+        font-weight: 400;
+        margin: 40px auto 24px;
+        font-size: 60px;
+        
+    }
+    >.hero-discrip{
+        font-weight: 500;
+        font-size: 20px;
+        display: block;
+        line-height: 36px;
+    }
+    >#btn-get{
+        padding: 25px ;
+        font-size: 15px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        margin-top: 30px;
+    }
+}
+/* ------------------------------- hero section end---------------------------------- */
+
+/* ----------------------- Slider CSS  start------------------------- */
+
+.hero-slider {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    white-space: nowrap;
+    padding: 10vh 0;
+    > .slider-container {
+      animation-name: slider;
+       animation-duration: 15s;
+      animation-iteration-count: infinite;
+      animation-timing-function: all ease 0.25s;
+      transition: all linear 0.5;    
+      display: inline-block;
+      width: 100%;
+      position: relative;
+      > .img {
+        width: 263px;
+        height: 299px;
+        display: inline-block;
+        margin: 0.5rem;
+        position: relative;
+        > video {
+          /* width: 267px;
+          height: 350px; */
+           margin-bottom: -145px; 
+        
+        }
+      }
+    }
+    > .slider-container:nth-child(2) {
+      margin-left: 25%;
+    }
+  }
+  #outer{
+      border-radius: 30%;
+      position: relative;
+  }
+  @keyframes slider {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  .img-info{
+    position: absolute;
+    display: grid;
+    z-index: 2;
+    bottom: 0; 
+     top: 0; 
+    left: 10px;
+    right:0;
+    color: #fff;
+    grid-auto-flow: row;
+    align-content: flex-end;
+    grid-auto-rows: min-content;
+    gap: 8px;
+    width: 263px;
+
+    >.img-info-tags{
+        display: flex;
+        grid-auto-flow: column;
+        gap: 8px;
+        grid-auto-columns: min-content;
+        >li{
+            border: 1px solid;
+            border-radius: 99px;
+            padding: 5px 15px;
+           
+        }
+    }
+  }
+  .img-info>*{
+    display: flex;
+    width: 100%;
+
+  }
+  
+  /* ----------------------- Slider CSS  end------------------------- */
+
+
+  /* --------------------------- hero start ------------------------------------ */
+
+  .home-feed{
+   
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    
+  }
+    .home-feed-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    font-size: 59px;
+    width: 100%;
+  
+    font-family: "Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-bottom: 40px;
+    }
+  
+  .home-feed-album{
+    display: inline-block ;
+    justify-content: center;
+    align-items: center;
+    width: 23%;
+    >.home-feed-box{
+      display: inline-block;
+    
+    }
+  }
+  .home-img>img{
+  
+    width: 280px;
+    height: 200px;
+    border-radius: 20px;
+    margin: 15px;
+  
+   }
+
+   .home-img>p{
+    margin-left: 20px;
+    line-height: 0;
+    color: black;
+   }
+  .home-browse{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    >a{
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    padding: 20px;
+    width: 230px;
+    border-radius: 999px;
+    color: #0d0c22;
+     background-color: #fff;
+    }
+  }
+  .home-browse>a:hover{
+    color:#4e46e2;
+  }
+    /* --------------------------- hero end ------------------------------------ */
+.middle-home{
+  padding: 150px 0;
+  background-color: #ffda79;
+  text-align: center;
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+  align-items: center; 
+  box-sizing: border-box;
+  max-height: 500px;
+  >.middle-home-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .middle-home-head{
+    width: 55%;
+    text-align: center;
+    font-family: "Source Serif 4", Georgia, serif;
+    font-weight: 400;
+    line-height: 75px;
+    font-size: 70px;
+    letter-spacing: 1px;
+  }
+}
+.middle-home-disc{
+  width: 48%;
+  font-size: 20px;
+  line-height: 35px;
+  font-family: "Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.middle-home--btn>a:nth-child(2){
+  
+background-color: #fff;
+color: black;
+border: 1px solid#fff;
+
+  
+}
+.middle-home--btn>a{
+  margin-top: 30px;
+  padding: 19px;
+  font-family: "Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+
+.middle-home-register{
+  padding:  20px 0px 0px 0px ;
+  font-family: "Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  >a{
+    text-decoration: underline;
+    color: #0d0c22;
+  }
+}
+
+
+/* ----------------------------- second slider start----------------------------------------- */
+
+
+.hero-slider2{
+  overflow-x: hidden;
+  overflow-y: hidden;
+  white-space: nowrap;
+  padding: 10vh 0;
+  > .slider-container2 {
+    animation-name: slider;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: all ease 0.25s;
+    transition: all linear 0.5;    
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    > .img {
+      width: 230px;
+      height: 180px;
+      display: inline-block;
+      margin: 0.5rem;
+      position: relative;
+      box-shadow: darkgray 8px;
+      > video {
+        /* width: 267px;
+        height: 350px; */
+         margin-bottom: -145px; 
+      
+      }
+      >p{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin-top: 12px;
+        color: #0d0c22;
+        font-size: 20px;
+        font-weight: 500;
+
+      }
+    }
+  }
+  > .slider-container2:nth-child(2) {
+    margin-left: 10%;
+  }
+}
